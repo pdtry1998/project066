@@ -3,6 +3,7 @@ import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from 'mdbreact';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
+import fire from "../config/fire";
 
 class Login extends Component {
 
@@ -16,8 +17,29 @@ class Login extends Component {
 
         }
 
+    }
+
+
+    Login(e) {
+
+        e.preventDefault()
+
+        fire.auth().signInWithEmailAndPassword(this.state.email,this.state.passeword).then((u) =>{
+            console.log(u)
+        }).catch((err) => {
+            console.log(err)
+        })
 
     }
+
+    handleChange(){
+        this.setState({
+            [e.target.nane] : e.target.value
+        })
+    }
+
+
+
 
     render() {
         return (
