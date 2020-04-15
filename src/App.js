@@ -1,48 +1,53 @@
-import React, {useState } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Login from './component/Login';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
+import { auth } from 'firebase';
 import fire from './config/fire';
 import Home from './component/Home';
 
-const App = () => {
-
-
-  const [user, setUser] = useState({})
-
-
-const authListener = () => {
-
-    fire.auth().onAuthStateChanged((user) => {
-
-      if (user) {
-       setUser({ user })
+class App extends Component{
+  constructor(props){
+    super(props)
+      this.state={
+        user: {}
       }
-      else {
-        setUser({ user: null })
+    }
+
+  componentDidMount(){
+    this.authListener()
+  }
+
+
+  authListener() {
+    fire.auth().onAuthStateChanged((user)=>{
+      if(user){
+        this.setState({user})
+      }
+      else{
+        this.setState({user:null})
       }
     })
   }
 
 
-
-
-    if (user == null) {
-      return (
-        <div >
-          
-            <Login />
-          
-        </div>
-      );
-    }
-
-    return (
+  render(){
+    if(this.state.user == null)
+    {
+    return(
       <div>
-        <Home />
+        <Login/>
+        </div>
+
+    );
+    }
+    return(
+      <div>
+        <Home/>
       </div>
     )
   }
+}
 export default App

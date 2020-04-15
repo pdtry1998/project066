@@ -1,9 +1,9 @@
 import React from 'react'
 import fire from '../config/fire'
 
-const Home = () => {
+const Home = props => {
 
-const logout = e => {
+const logout = () => {
 
     fire.auth().signOut();
 }
@@ -11,7 +11,9 @@ const logout = e => {
     return (
         <div>
             Home Page
+            <div>
             <button onClick={logout}>logout</button>
+            </div>
             </div>
 
     )
