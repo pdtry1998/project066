@@ -22,7 +22,6 @@ class Login extends Component {
 
     }
 
-
     login(e) {
 
         e.preventDefault()
