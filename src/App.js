@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Login from './component/Login';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -7,6 +8,11 @@ import "mdbreact/dist/css/mdb.css";
 import { auth } from 'firebase';
 import fire from './config/fire';
 import Home from './component/Home';
+
+
+
+
+
 
 class App extends Component{
   constructor(props){
