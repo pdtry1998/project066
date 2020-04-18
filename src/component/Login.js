@@ -77,7 +77,7 @@ class Login extends Component {
           <div>
             <MDBNavbar dark expand="md" fixed="top">
                 <MDBNavbarBrand>
-                  <strong className="white-text">OnePice</strong>
+                  <strong className="white-text">ไปเที่ยวกาน</strong>
                 </MDBNavbarBrand>    
             </MDBNavbar>   
           </div>
@@ -97,8 +97,9 @@ class Login extends Component {
                   </h1>
                   <hr className="hr-light" />
                   <h6 className="mb-4">
-                    ยินดีต้อนรับเข้าสู่เว็บไซต์ วันพีช ทางผู้จัดทำได้จัดทำเว็บไซต์นี้ขึ้นมาเพื่อให้ผู้ที่สนใจในการ์ตูนเรื่องนี้ เข้ามาศึกษา ร่วมสนุกกัน
-                    ผู้จัดทำเชื่อว่าไม่มีใครไม่รู้จักการ์ตูนเรื่องนี้ 
+                    ยินดีต้อนรับเข้าสู่เว็บไซต์ไปเที่ยวกาน เชิญเข้ามาแชร์ข้อมูลประสบการณ์การท่องเที่ยวในประเทศไทยที่ประทับใจของท่านให้เพื่อน ๆ 
+                    ได้รับรู้กันเถอะ
+
                   </h6>
                 </MDBAnimation>
 

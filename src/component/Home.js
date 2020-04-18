@@ -2,6 +2,27 @@ import React from 'react'
 import fire from '../config/fire'
 import Carousel from 'react-bootstrap/Carousel'
 import { Navbar, Nav, FormControl, Form, Button } from 'react-bootstrap'
+import { BrowserRouter as Router } from "react-router-dom";
+import {
+    MDBNavbar,
+    MDBNavbarBrand,
+    MDBNavbarNav,
+    MDBNavItem,
+    MDBNavLink,
+    MDBNavbarToggler,
+    MDBCollapse,
+    MDBMask,
+    MDBRow,
+    MDBCol,
+    MDBIcon,
+    MDBBtn,
+    MDBView,
+    MDBContainer,
+    MDBCard,
+    MDBCardBody,
+    MDBInput,
+    MDBAnimation
+  } from "mdbreact";
 
 
 const Home = props => {
@@ -14,40 +35,54 @@ const Home = props => {
 
     return (
 
-        <div>
+        
+
+<div id="classicformpage">
+        <Router>
+          <div>
+            <MDBNavbar dark expand="md" fixed="top">
+                <MDBNavbarBrand>
+                  <strong className="white-text">ไปเที่ยวกาน</strong>
+                </MDBNavbarBrand>    
+            </MDBNavbar>   
+          </div>
+        </Router>
+
+
+
             <Carousel>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://i.pinimg.com/originals/bf/2a/e6/bf2ae6b3034c425bc899ad9706a9352c.jpg" alt="picture" width="150" height="750"
+                        src="https://s359.kapook.com/pagebuilder/8c6127fd-cabb-4ca6-b386-8009327dcef7.jpg" alt="picture" width="150" height="750"
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h3>เสม็ดนางชี </h3>
+                        <p>ตั้งอยู่ที่ ทางหลวงแผ่นดินหมายเลข 2331 (อยู่ในอุทยานแห่งชาติภูหินร่องกล้า) กกสะทอน , ด่านซ้าย , เลย </p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://www.thairath.co.th/media/dFQROr7oWzulq5FZYSgOLp7PKj4egPGY5tcCY8hQCvTLxIoycR3byOEOlC04udPWN4c.jpg" alt="picture" width="150" height="750"
+                        src="https://img.wongnai.com/p/1920x0/2018/05/16/9777aa01f05c4662aa2787d321644a62.jpg" alt="picture" width="150" height="750"
                         alt="Third slide"
                     />
 
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>เขตรักษาพันธุ์สัตว์ป่าภูเขียว</h3>
+                        <p>ตั้งอยู่ที่ ทางหลวงหมายเลข 2359 หนองบัวแดง , หนองบัวแดง , ชัยภูมิ</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://cartoon.mthai.com/app/uploads/2014/04/73.jpg" alt="picture" width="150" height="750"
+                        src="https://www.sabaiatkan.com/wp-content/uploads/2014/11/erawan-waterfall-3.jpg" alt="picture" width="150" height="750"
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h3>น้ำตกเอราวัณ</h3>
+                        <p>ตั้งอยู่ที่ ซอย หัวหิน 61 ถนน ดำเนินเกษม (ใช้ทางหลวงหมายเลข 4 (เพชรเกษม) ผ่านจังหวัดนครปฐม จังหวัดราชบุรี จังหวัดเพชรบุรี) หัวหิน , หัวหิน , ประจวบคีรีขันธ์ </p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
@@ -56,11 +91,11 @@ const Home = props => {
 
             <div>
                 <Navbar bg="dark" variant="dark">
-                    <Navbar.Brand href="#home">ONE PIECE</Navbar.Brand>
+                    <Navbar.Brand href="#home">หน้าแรก</Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">Character</Nav.Link>
-                        <Nav.Link href="#features"> Seasons </Nav.Link>
-                        <Nav.Link href="#pricing">About Me</Nav.Link>
+                        <Nav.Link href="#home">แนะนำ</Nav.Link>
+                        <Nav.Link href="#features"> แลกเปลี่ยน </Nav.Link>
+                        <Nav.Link href="#pricing">เกี่ยวกับฉัน</Nav.Link>
                     </Nav>
                     <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
