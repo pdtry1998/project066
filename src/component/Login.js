@@ -1,10 +1,27 @@
 import React, { Component } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from 'mdbreact';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import "bootstrap-css-only/css/bootstrap.min.css";
-import "mdbreact/dist/css/mdb.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import {
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarNav,
+  MDBNavItem,
+  MDBNavLink,
+  MDBNavbarToggler,
+  MDBCollapse,
+  MDBMask,
+  MDBRow,
+  MDBCol,
+  MDBIcon,
+  MDBBtn,
+  MDBView,
+  MDBContainer,
+  MDBCard,
+  MDBCardBody,
+  MDBInput,
+  MDBAnimation
+} from "mdbreact";
+import "./Login.css";
 import fire from "../config/fire";
-
 
 class Login extends Component {
 
@@ -51,30 +68,121 @@ class Login extends Component {
     }
 
 
+  
 
+  render() {
+    return (
+      <div id="classicformpage">
+        <Router>
+          <div>
+            <MDBNavbar dark expand="md" fixed="top">
+                <MDBNavbarBrand>
+                  <strong className="white-text">OnePice</strong>
+                </MDBNavbarBrand>    
+            </MDBNavbar>   
+          </div>
+        </Router>
 
-    render() {
-        return (
+        <MDBView>
+          <MDBMask className="d-flex justify-content-center align-items-center gradient">
             <MDBContainer>
-                <MDBRow>
-                    <MDBCol md="6">
-                        <form>
-                            <p className="h5 text-center mb-4">Sign in</p>
-                            <div className="grey-text">
-                                <MDBInput label="Type your email" icon="envelope" group type="email" name="email" validate error="wrong"
-                                    success="right" value={this.state.email} onChange={this.handleChange} />
-                                <MDBInput label="Type your password" icon="lock" group type="password" name="password" validate value={this.state.password} onChange={this.handleChange} />
-                            </div>
-                            <div className="text-center">
-                                <MDBBtn color="primary" onClick={this.login}>Login</MDBBtn>
-                                <MDBBtn color="primary" onClick={this.sigup}>Register</MDBBtn>
-                            </div>
-                        </form>
-                    </MDBCol>
-                </MDBRow>
+              <MDBRow>
+                <MDBAnimation
+                  type="fadeInLeft"
+                  delay=".3s"
+                  className="white-text text-center text-md-left col-md-6 mt-xl-5 mb-5"
+                >
+                  <h1 className="h1-responsive font-weight-bold">
+                    WELCOME
+                  </h1>
+                  <hr className="hr-light" />
+                  <h6 className="mb-4">
+                    ยินดีต้อนรับเข้าสู่เว็บไซต์ วันพีช ทางผู้จัดทำได้จัดทำเว็บไซต์นี้ขึ้นมาเพื่อให้ผู้ที่สนใจในการ์ตูนเรื่องนี้ เข้ามาศึกษา ร่วมสนุกกัน
+                    ผู้จัดทำเชื่อว่าไม่มีใครไม่รู้จักการ์ตูนเรื่องนี้ 
+                  </h6>
+                </MDBAnimation>
+
+                <MDBCol md="6" xl="5" className="mb-4">
+                  <MDBAnimation type="fadeInRight" delay=".3s">
+                    <MDBCard id="classic-card">
+                      <MDBCardBody className="white-text">
+                        <h3 className="text-center">
+                          <MDBIcon icon="user" /> Register:
+                        </h3>
+                        <hr className="hr-light" />
+                        <MDBInput
+                          className="white-text"
+                          iconClass="white-text"
+                          label="Your email"
+                          roup type="email" 
+                          name="email" 
+                          validate error="wrong"
+                          success="right"
+                          icon="envelope"
+                          value={this.state.email}
+                          onChange={this.handleChange}
+                        />
+                        <MDBInput
+                          className="white-text"
+                          iconClass="white-text"
+                          label="Your password"
+                          icon="lock"
+                          type="password"
+                          group type="password" 
+                          name="password" 
+                          validate value={this.state.password} 
+                          onChange={this.handleChange}
+
+                        />
+                        <div className="text-center mt-4 black-text">
+                        
+                          <MDBBtn rounded color="danger" onClick={this.login} >Login</MDBBtn>
+                          <MDBBtn rounded color="danger" onClick={this.sigup} >Sign Up</MDBBtn>
+                          <hr className="hr-light" />
+                          <div className="text-center d-flex justify-content-center white-label">
+                            <a href="#!" className="p-2 m-2">
+                              <MDBIcon
+                                fab
+                                icon="facebook"
+                                className="white-text"
+                              />
+                            </a>
+                            <a href="#!" className="p-2 m-2">
+                              <MDBIcon
+                                fab
+                                icon="twitter"
+                                className="white-text"
+                              />
+                            </a>
+                            <a href="#!" className="p-2 m-2">
+                              <MDBIcon
+                                fab
+                                icon="google"
+                                className="white-text"
+                              />
+                            </a>
+                            <a href="#!" className="p-2 m-2">
+                              <MDBIcon
+                                fab
+                                icon="github"
+                                className="white-text"
+                              />
+                            </a>
+                          </div>
+                        </div>
+                      </MDBCardBody>
+                    </MDBCard>
+                  </MDBAnimation>
+                </MDBCol>
+              </MDBRow>
             </MDBContainer>
-        );
-    }
+          </MDBMask>
+        </MDBView>
+
+        
+      </div>
+    );
+  }
 }
 
 export default Login;
