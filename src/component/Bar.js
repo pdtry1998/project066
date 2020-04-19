@@ -8,6 +8,7 @@ import {
     MDBNavbarBrand,
     MDBNavbarNav,
     MDBNavItem,
+    MDBFormInline,
     MDBNavLink,
     MDBNavbarToggler,
     MDBCollapse,
@@ -43,6 +44,10 @@ const Bar = (props) => {
                     <MDBNavbar dark expand="md" fixed="top">
                         <MDBNavbarBrand>
                             <strong className="white-text">ไปเที่ยวกาน</strong>
+                        
+                        
+                            <Button onClick={logout}>logout</Button>
+                          
                         </MDBNavbarBrand>
                     </MDBNavbar>
                 </div>
@@ -54,7 +59,7 @@ const Bar = (props) => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://s359.kapook.com/pagebuilder/8c6127fd-cabb-4ca6-b386-8009327dcef7.jpg" alt="picture" width="150" height="750"
+                        src="https://s359.kapook.com/pagebuilder/8c6127fd-cabb-4ca6-b386-8009327dcef7.jpg" alt="picture" width="150" height="700"
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -65,7 +70,7 @@ const Bar = (props) => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://img.wongnai.com/p/1920x0/2018/05/16/9777aa01f05c4662aa2787d321644a62.jpg" alt="picture" width="150" height="750"
+                        src="https://img.wongnai.com/p/1920x0/2018/05/16/9777aa01f05c4662aa2787d321644a62.jpg" alt="picture" width="150" height="700"
                         alt="Third slide"
                     />
 
@@ -77,7 +82,7 @@ const Bar = (props) => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://www.sabaiatkan.com/wp-content/uploads/2014/11/erawan-waterfall-3.jpg" alt="picture" width="150" height="750"
+                        src="https://www.sabaiatkan.com/wp-content/uploads/2014/11/erawan-waterfall-3.jpg" alt="picture" width="150" height="700"
                         alt="Third slide"
                     />
                     <Carousel.Caption>
@@ -100,7 +105,7 @@ const Bar = (props) => {
                     <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                         <Button variant="outline-info">Search</Button>
-                        <Button onClick={logout}>logout</Button>
+                      
                     </Form>
                 </Navbar>
 
