@@ -22,6 +22,7 @@ import {
 } from "mdbreact";
 import "./Login.css";
 import fire from "../config/fire";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Login extends Component {
 

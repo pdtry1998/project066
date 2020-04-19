@@ -1,11 +1,15 @@
 import React from 'react'
+import Bar from './Bar';
 import { Form } from 'react-bootstrap'
 
 
 const PageChange = props => {
     return (
         <div>
-            From
+            <Bar />
+            <div>
+                สวัสดี 2
+            </div>
         </div>
     )
 }

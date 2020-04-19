@@ -10,6 +10,7 @@ import Page_change from './component/Page_change';
 import Page_aboutme from './component/Page_aboutme';
 
 
+import "mdbreact/dist/css/mdb.css";
 import fire from './config/fire';
 import { Route } from 'react-router-dom';
 
