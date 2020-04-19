@@ -91,11 +91,11 @@ const Home = props => {
 
             <div>
                 <Navbar bg="dark" variant="dark">
-                    <Navbar.Brand href="#home">หน้าแรก</Navbar.Brand>
+                    <Navbar.Brand href="/page_home">หน้าแรก</Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">แนะนำ</Nav.Link>
-                        <Nav.Link href="#features"> แลกเปลี่ยน </Nav.Link>
-                        <Nav.Link href="#pricing">เกี่ยวกับฉัน</Nav.Link>
+                        <Nav.Link href="/page_guide">แนะนำ</Nav.Link>
+                        <Nav.Link href="/page_change"> แลกเปลี่ยน </Nav.Link>
+                        <Nav.Link href="/page_aboutme">เกี่ยวกับฉัน</Nav.Link>
                     </Nav>
                     <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -106,11 +106,7 @@ const Home = props => {
 
 
 
-                <div>
-
-                    <br></br> <button onClick={logout}>logout</button>
-
-                </div>
+               
 
 
                 
