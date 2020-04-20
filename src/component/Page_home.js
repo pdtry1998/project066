@@ -150,6 +150,118 @@ const PageHome = props => {
 }
 
 
+<section className="text-center my-5">
+      <h2 className="h1-responsive font-weight-bold my-5">
+        Our best projects
+      </h2>
+      <p className="grey-text w-responsive mx-auto mb-5">
+        Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        est laborum.
+      </p>
+
+      <MDBRow className="text-center">
+        <MDBCol lg="3" md="12" className="mb-lg-0 mb-4">
+          <MDBView className="overlay rounded z-depth-1" waves>
+            <img
+              src="https://blog.bangkokair.com/wp-content/uploads/2018/01/OG-%E0%B8%94%E0%B8%AD%E0%B8%A2%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%99%E0%B8%99%E0%B8%97%E0%B9%8C-1.jpg"
+              alt=""
+              className="img-fluid"
+            />
+            <a href="#!">
+              <MDBMask overlay="white-slight" />
+            </a>
+          </MDBView>
+          <MDBCardBody className="pb-0">
+            <h4 className="font-weight-bold my-3">Title of the news</h4>
+            <p className="grey-text">
+              Temporibus autem quibusdam et aut officiis debitis aut rerum
+              necessitatibus saepe eveniet ut et voluptates repudiandae.
+            </p>
+            <MDBBtn color="indigo" size="sm">
+              <MDBIcon far icon="clone" className="left" /> MDBView project
+            </MDBBtn>
+          </MDBCardBody>
+        </MDBCol>
+
+
+        <MDBCol lg="3" md="12" className="mb-lg-0 mb-4">
+          <MDBView className="overlay rounded z-depth-1" waves>
+            <img
+              src="https://img.wongnai.com/p/1920x0/2018/05/16/9777aa01f05c4662aa2787d321644a62.jpg"
+              alt=""
+              className="img-fluid"
+            />
+            <a href="#!">
+              <MDBMask overlay="white-slight" />
+            </a>
+          </MDBView>
+          <MDBCardBody className="pb-0">
+            <h4 className="font-weight-bold my-3">Title of the news</h4>
+            <p className="grey-text">
+              Temporibus autem quibusdam et aut officiis debitis aut rerum
+              necessitatibus saepe eveniet ut et voluptates repudiandae.
+            </p>
+            <MDBBtn color="indigo" size="sm">
+              <MDBIcon far icon="clone" className="left" /> MDBView project
+            </MDBBtn>
+          </MDBCardBody>
+        </MDBCol>
+
+        <MDBCol lg="3" md="12" className="mb-lg-0 mb-4">
+          <MDBView className="overlay rounded z-depth-1" waves>
+            <img
+              src="https://www.sabaiatkan.com/wp-content/uploads/2014/11/erawan-waterfall-3.jpg"
+              alt=""
+              className="img-fluid"
+            />
+            <a href="#!">
+              <MDBMask overlay="white-slight" />
+            </a>
+          </MDBView>
+          <MDBCardBody className="pb-0">
+            <h4 className="font-weight-bold my-3">Title of the news</h4>
+            <p className="grey-text">
+              Temporibus autem quibusdam et aut officiis debitis aut rerum
+              necessitatibus saepe eveniet ut et voluptates repudiandae.
+            </p>
+            <MDBBtn color="indigo" size="sm">
+              <MDBIcon far icon="clone" className="left" /> MDBView project
+            </MDBBtn>
+          </MDBCardBody>
+        </MDBCol>
+
+
+        <MDBCol lg="3" md="12" className="mb-lg-0 mb-4">
+          <MDBView className="overlay rounded z-depth-1" waves>
+            <img
+              src="https://img.wongnai.com/p/1920x0/2019/01/09/9b7925896b09424c98a86e2d16a06eea.jpg"
+              alt=""
+              className="img-fluid"
+            />
+            <a href="#!">
+              <MDBMask overlay="white-slight" />
+            </a>
+          </MDBView>
+          <MDBCardBody className="pb-0">
+            <h4 className="font-weight-bold my-3">Title of the news</h4>
+            <p className="grey-text">
+              Temporibus autem quibusdam et aut officiis debitis aut rerum
+              necessitatibus saepe eveniet ut et voluptates repudiandae.
+            </p>
+            <MDBBtn color="indigo" size="sm">
+              <MDBIcon far icon="clone" className="left" /> MDBView project
+            </MDBBtn>
+          </MDBCardBody>
+        </MDBCol>
+
+
+      </MDBRow>
+    </section>
+
+
+
                </div>
                </div>
     )
