@@ -5,9 +5,8 @@ import * as serviceWorker from './serviceWorker';
 
 
 
-import {BrowserRouter, Router, Route, Link} from 'react-router-dom'
-import {browserHistory} from 'react-router'
-import ReactDOM, {render} from 'react-dom';
+import {BrowserRouter} from 'react-router-dom'
+import {render} from 'react-dom';
 
 render(
   <BrowserRouter>

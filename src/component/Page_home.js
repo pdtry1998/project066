@@ -2,7 +2,6 @@ import React from 'react'
 import Bar from './Bar';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBIcon, MDBView, MDBBtn } from "mdbreact";
 
-import { Form } from 'react-bootstrap'
 
 
 const PageHome = props => {

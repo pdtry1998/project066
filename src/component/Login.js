@@ -3,11 +3,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 import {
   MDBNavbar,
   MDBNavbarBrand,
-  MDBNavbarNav,
-  MDBNavItem,
-  MDBNavLink,
-  MDBNavbarToggler,
-  MDBCollapse,
   MDBMask,
   MDBRow,
   MDBCol,
@@ -23,6 +18,8 @@ import {
 import "./Login.css";
 import fire from "../config/fire";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
+import firebase from 'firebase'
 
 class Login extends Component {
 
@@ -35,11 +32,42 @@ class Login extends Component {
         this.state = {
 
             email: "",
-            password: ""
+            password: "",
+            isSignedIn : false
 
         }
 
     }
+
+    uiConfig = {
+
+      signInFlow: "popup",
+      signInOptions: [
+    
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+          firebase.auth.GithubAuthProvider.PROVIDER_ID
+      ],
+    
+      callback: {
+    
+          signInSuccess: () => false
+      }
+    }
+    
+     componentDidMount () {
+    
+    
+    
+      firebase.auth().onAuthStateChanged(user => {
+          this.setState({ isSignedIn: !!user })
+      })
+    }
+
+
+
+
+
 
     login(e) {
 
@@ -141,36 +169,10 @@ class Login extends Component {
                           <MDBBtn rounded color="danger" onClick={this.login} >Login</MDBBtn>
                           <MDBBtn rounded color="danger" onClick={this.sigup} >Sign Up</MDBBtn>
                           <hr className="hr-light" />
-                          <div className="text-center d-flex justify-content-center white-label">
-                            <a href="#!" className="p-2 m-2">
-                              <MDBIcon
-                                fab
-                                icon="facebook"
-                                className="white-text"
-                              />
-                            </a>
-                            <a href="#!" className="p-2 m-2">
-                              <MDBIcon
-                                fab
-                                icon="twitter"
-                                className="white-text"
-                              />
-                            </a>
-                            <a href="#!" className="p-2 m-2">
-                              <MDBIcon
-                                fab
-                                icon="google"
-                                className="white-text"
-                              />
-                            </a>
-                            <a href="#!" className="p-2 m-2">
-                              <MDBIcon
-                                fab
-                                icon="github"
-                                className="white-text"
-                              />
-                            </a>
-                          </div>
+                          <StyledFirebaseAuth
+                                    uiConfig={this.uiConfig}
+                                    firebaseAuth={firebase.auth()}
+                                />
                         </div>
                       </MDBCardBody>
                     </MDBCard>

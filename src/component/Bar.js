@@ -39,19 +39,7 @@ const Bar = (props) => {
 
 
         <div id="classicformpage">
-            <Router>
-                <div>
-                    <MDBNavbar dark expand="md" fixed="top">
-                        <MDBNavbarBrand>
-                            <strong className="white-text">ไปเที่ยวกาน</strong>
-                        
-                        
-                            <Button onClick={logout}>logout</Button>
-                          
-                        </MDBNavbarBrand>
-                    </MDBNavbar>
-                </div>
-            </Router>
+         
 
 
 
@@ -95,7 +83,7 @@ const Bar = (props) => {
 
 
             <div>
-                <Navbar bg="dark" variant="dark">
+                <Navbar bg="dark    " variant="dark ">
                     <Navbar.Brand href="/page_home">หน้าแรก</Navbar.Brand>
                     <Nav className="mr-auto">
                         <Nav.Link href="/page_guide">แนะนำ</Nav.Link>
@@ -104,7 +92,8 @@ const Bar = (props) => {
                     </Nav>
                     <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <Button variant="outline-info">Search</Button>
+                        <MDBBtn rounded color="danger">Search</MDBBtn>
+                        <MDBBtn rounded color="danger" onClick={logout}>logout</MDBBtn>
                       
                     </Form>
                 </Navbar>
