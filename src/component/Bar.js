@@ -83,11 +83,12 @@ const Bar = (props) => {
 
 
             <div>
-                <Navbar bg="dark    " variant="dark ">
+                <Navbar bg="dark " variant="dark ">
                     <Navbar.Brand href="/page_home">หน้าแรก</Navbar.Brand>
                     <Nav className="mr-auto">
                         <Nav.Link href="/page_guide">แนะนำ</Nav.Link>
                         <Nav.Link href="/page_change"> แลกเปลี่ยน </Nav.Link>
+                        <Nav.Link href="/page_show"> show </Nav.Link>
                         <Nav.Link href="/page_aboutme">เกี่ยวกับฉัน</Nav.Link>
                     </Nav>
                     <Form inline>

@@ -7,6 +7,7 @@ import Login from './component/Login';
 import Page_home from './component/Page_home';
 import Page_guide from './component/Page_guide';
 import Page_change from './component/Page_change';
+import Page_show from './component/Page_show';
 import Page_aboutme from './component/Page_aboutme';
 
 
@@ -56,6 +57,7 @@ class App extends Component {
         <Route path="/page_home" component={Page_home} />
         <Route path="/page_guide" component={Page_guide} />
         <Route path="/page_change" component={Page_change} />
+        <Route path="/page_show" component={Page_show} />
         <Route path="/page_aboutme" component={Page_aboutme} />
       </div>
     )
