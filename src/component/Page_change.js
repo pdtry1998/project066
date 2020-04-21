@@ -1,7 +1,7 @@
 import React from 'react'
 import  { useState, useEffect } from 'react';
 import Bar from './Bar';
-import editshow from './editshow'
+import Editshow from './Editshow'
 import { Form } from 'react-bootstrap'
 import { TabContent, TabPane, Nav, NavItem, NavLink, Button, Row, Col } from 'reactstrap';
 import {
@@ -17,13 +17,11 @@ const PageChange = props => {
 
     const [id,setId] = useState(0)
     const [imgUrl1, SetImgUrl1] = useState('')
-    const [productName, SetProductName] = useState('')
-    const [price, SetPrice] = useState('')
-    const [detail, SetDetail] = useState('')
-    const [nameUser, setNameUser] = useState('')
-    const [telephone, setTelephone] = useState('')
-    const [facebook, setFacebook] = useState('')
-    const [line, setLine] = useState('')
+    const [placetName, SetplaceName] = useState('')
+    const [district, Setdistrict] = useState('')
+    const [province, Setprovince] = useState('')
+    const [sector, Setsector] = useState('')
+    const [time, Settime] = useState('')
     const [editshow, SetEditshow] = useState([{}])
 
     useEffect(() => {
@@ -39,9 +37,9 @@ const PageChange = props => {
             console.log(snapshot);
 
             let editshow = snapshot.docs.map(d => {
-                const { id, imgUrl1, productName, price, detail,  nameUser, telephone, facebook, line } = d.data()
-                console.log(id, imgUrl1, productName, price, detail,  nameUser, telephone, facebook, line)
-                return {id, imgUrl1, productName, price, detail,  nameUser, telephone, facebook, line}
+                const { id, imgUrl1, placetName, district, province,  sector, time } = d.data()
+                console.log(id, imgUrl1, placetName, district, province,  sector, time )
+                return {id, imgUrl1, placetName, district, province,  sector, time }
             })
 
             SetEditshow(editshow)
@@ -73,7 +71,7 @@ const PageChange = props => {
     const addEditshow = () => {
 
         let id = (editshow.length === 0) ? 1 : editshow[editshow.length - 1].id + 1
-        firestore.collection("store").doc(id + '').set({ id, imgUrl1, productName, price, detail,  nameUser, telephone, facebook, line})
+        firestore.collection("store").doc(id + '').set({ id, imgUrl1, placetName, district, province,  sector, time})
         alert("You Add Finish")
     }
 
@@ -116,68 +114,42 @@ const PageChange = props => {
                                                     onChange={(e) => SetImgUrl1(e.target.value)} 
                                                 />
                                             </div>
+                                             district, province,  sector, time
                                             <div className="form-group">
-                                                <label htmlFor="imgUrl2">PRODUCT NAME</label>
+                                                <label htmlFor="district"> district</label>
                                                 <input type="text"
-                                                    name="imgUrl2"
+                                                    name="district"
                                                     className="form-control"
-                                                    id="imgUrl2"
-                                                    onChange={(e) => SetProductName(e.target.value)} 
+                                                    id="district"
+                                                    onChange={(e) => Setdistrict(e.target.value)} 
                                                 />
                                             </div>
                                             <div className="form-group">
-                                                <label htmlFor="imgUrl3">PRICE</label>
+                                                <label htmlFor="province">province</label>
                                                 <input type="text"
-                                                    name="imgUrl3"
+                                                    name="province"
                                                     className="form-control"
-                                                    id="imgUrl3"
-                                                    onChange={(e) => SetPrice(e.target.value)}  
+                                                    id="province"
+                                                    onChange={(e) => Setprovince(e.target.value)}  
                                                 />
                                             </div>
                                             <div className="form-group">
-                                                <label htmlFor="strain">DETAIL</label>
+                                                <label htmlFor="sector">sector</label>
                                                 <input type="text"
-                                                    name="strain"
+                                                    name="sector"
                                                     className="form-control"
-                                                    id="strain"
-                                                    onChange={(e) => SetDetail(e.target.value)} 
+                                                    id="sector"
+                                                    onChange={(e) => Setsector(e.target.value)} 
                                                 />
                                             </div>
                                             <div className="form-group">
-                                                <label htmlFor="nameUser">USER NAME</label>
+                                                <label htmlFor="time">time</label>
                                                 <input type="text"
-                                                    name="nameUser"
+                                                    name="time"
                                                     className="form-control"
-                                                    id="nameUser"
-                                                    onChange={(e) => setNameUser(e.target.value)}  
+                                                    id="time"
+                                                    onChange={(e) => Settime(e.target.value)}  
                                                 />
-                                            </div>
-                                            <div className="form-group">
-                                                <label htmlFor="telephone">Telephone</label>
-                                                <input type="text"
-                                                    name="telephone"
-                                                    className="form-control"
-                                                    id="telephone"
-                                                    onChange={(e) => setTelephone(e.target.value)} 
-                                                />
-                                            </div>
-                                            <div className="form-group">
-                                                <label htmlFor="facebook">Facebook</label>
-                                                <input type="text"
-                                                    name="facebook"
-                                                    className="form-control"
-                                                    id="facebook"
-                                                    onChange={(e) => setFacebook(e.target.value)}  
-                                                />
-                                            </div>
-                                            <div className="form-group">
-                                                <label htmlFor="line">Line</label>
-                                                <input type="text"
-                                                    name="line"
-                                                    className="form-control"
-                                                    id="line"
-                                                    onChange={(e) => setLine(e.target.value)} 
-                                            />
                                             </div>
                                         </form>
                                         <div className="text-center">
