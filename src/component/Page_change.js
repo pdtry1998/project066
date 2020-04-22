@@ -15,7 +15,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const PageChange = props => {
 
-    const [id,setId] = useState(0)
+    const [id,Setid] = useState(0)
     const [imgUrl1, SetImgUrl1] = useState('')
     const [placetName, SetplaceName] = useState('')
     const [district, Setdistrict] = useState('')
@@ -32,7 +32,7 @@ const PageChange = props => {
 
     const retriveData = () => {
 
-        firestore.collection("Travel").onSnapshot(snapshot => {
+        firestore.collection("editshow").onSnapshot(snapshot => {
 
             console.log(snapshot);
 
@@ -71,7 +71,7 @@ const PageChange = props => {
     const addEditshow = () => {
 
         let id = (editshow.length === 0) ? 1 : editshow[editshow.length - 1].id + 1
-        firestore.collection("store").doc(id + '').set({ id, imgUrl1, placetName, district, province,  sector, time})
+        firestore.collection("editshow").doc(id + '').set({ id, imgUrl1, placetName, district, province,  sector, time})
         alert("You Add Finish")
     }
 

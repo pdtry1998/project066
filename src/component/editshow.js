@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, ListGroup, Carousel } from 'react-bootstrap';
 import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBIcon } from 'mdbreact';
-import Modal from "react-bootstrap/Modal";
-import { firestore } from '../index'
+
 
 
 export default props => {
