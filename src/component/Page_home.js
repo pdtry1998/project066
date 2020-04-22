@@ -25,18 +25,18 @@ const PageHome = props => {
         <MDBContainer>
         <MDBRow>
           <MDBCol md="12" className="mb-3">
-          <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(137).jpg" className="img-fluid z-depth-1" alt="" />
+          <img src="https://kasikornresearch.com/SiteCollectionDocuments/analysis/business/tourism/Th2Th_Banner.jpg" className="img-fluid z-depth-1" alt="" />
           </MDBCol>
         </MDBRow>
         <MDBRow>
           <MDBCol lg="4" md="12" className="mb-3">
-          <img src="https://mdbootstrap.com/img/Others/documentation/img(115)-mini.jpg" className="img-fluid z-depth-1" alt="" />
+          <img src="https://ed.edtfiles-media.com/ud/news/1/140/419059/500rai_Cover-850x567.jpg" className="img-fluid z-depth-1" alt="" />
           </MDBCol>
           <MDBCol lg="4" md="6" className="mb-3">
-            <img src="https://mdbootstrap.com/img/Others/documentation/img(116)-mini.jpg" className="img-fluid z-depth-1" alt="" />
+            <img src="https://images.thaiza.com/37/37_20121226133538..jpg" className="img-fluid z-depth-1" alt="" />
           </MDBCol>
           <MDBCol lg="4" md="6" className="mb-3">
-            <img src="https://mdbootstrap.com/img/Others/documentation/img(117)-mini.jpg" className="img-fluid z-depth-1" alt="" />
+            <img src="https://teawtalay.com/wp-content/uploads/4island-2.jpg" className="img-fluid z-depth-1" alt="" />
           </MDBCol>
       </MDBRow>
       <MDBRow>

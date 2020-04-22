@@ -114,7 +114,7 @@ const PageChange = props => {
                                                     onChange={(e) => SetImgUrl1(e.target.value)} 
                                                 />
                                             </div>
-                                             district, province,  sector, time
+                                            
                                             <div className="form-group">
                                                 <label htmlFor="district"> district</label>
                                                 <input type="text"
