@@ -1,28 +1,22 @@
 import React from 'react'
 import Bar from './Bar';
-import {  MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBIcon, MDBView, MDBBtn } from "mdbreact";
-import { Form } from 'react-bootstrap'
 import Topguide from './Topguide';
 import Topguide2 from './Topguide2';
+import Footer from './Footer'
+import Pageguide3 from './Pageguide3';
+
 
 const PageGuide = props => {
     return (
         <div>
             <Bar />
-            <Topguide /> 
-            <Topguide2 /> 
+            <Topguide/>
+            <Topguide2/>
             <div>
-           
-  
-
-
-
-              
-
-
-
-            </div>
-        </div>
+                <Pageguide3/>
+                <Footer/>
+                </div>
+            </div>    
     )
 }
 

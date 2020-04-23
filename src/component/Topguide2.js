@@ -9,14 +9,12 @@ const Topguide2 = () => {
         style={{ fontWeight: 300, maxWidth: "90%" }}
       >
         <MDBCardBody style={{ paddingTop: 0 }}>
-          <h2 className="h1-responsive font-weight-bold my-5 text-center">
-            Section title
+          <h2 className="h1-responsive font-weight-bold my-5 text-center ">
+            ทะเล
           </h2>
           <p className="dark-grey-text mx-auto mb-5 w-75 text-center">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit id
-            laborum.
+          ฤดูร้อนแบบนี้ก็คงจะหนีไม่พ้นการไปเที่ยวทะเลสวยๆ หรือออกไปเที่ยวเกาะสวยๆ 
+          ซึ่งประเทศเรา ชายหาดเจ๋งๆ ทะเลน้ำใสๆ มีเยอะแยะมากมาย ไม่ต้องไปไกลถึงเมืองนอกก็เที่ยวทะเลได้แบบฟินๆ
           </p>
           <MDBRow>
             <MDBCol md="12" lg="6">
@@ -24,34 +22,19 @@ const Topguide2 = () => {
                 <MDBView hover rounded className="z-depth-1-half mb-4">
                   <img
                     className="img-fluid"
-                    src="https://mdbootstrap.com/img/Photos/Slides/1.jpg"
+                    src="https://s.isanook.com/tr/0/rp/r/w728/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL3RyLzAvdWQvMjgzLzE0MTc5ODkvcy5qcGc=.jpg"
                     alt=""
                   />
                   <a href="#!">
                     <MDBMask overlay="white-slight" className="waves-light" />
                   </a>
                 </MDBView>
-                <div className="d-flex justify-content-between">
-                  <a href="#!" className="deep-orange-text">
-                    <h6 className="font-weight-bold">
-                      <MDBIcon icon="utensils" className="pr-2" />
-                      Culinary
-                    </h6>
-                  </a>
-                  <p className="font-weight-bold dark-grey-text">
-                    <MDBIcon far icon="clock" className="pr-2" />
-                    27/02/2018
-                  </p>
-                </div>
                 <h3 className="font-weight-bold dark-grey-text mb-3 p-0">
-                  <a href="#!">Title of the news</a>
+                  <a href="#!"> เกาะสิมิลัน</a>
                 </h3>
                 <p className="dark-grey-text mb-lg-0 mb-md-5 mb-4">
-                  Sed ut perspiciatis unde voluptatem omnis iste natus error sit
-                  voluptatem accusantium doloremque laudantium, totam rem
-                  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                  architecto beatae vitae explicabo. Duis aute irure dolor in
-                  reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+                เป็นอุทยานแห่งชาติที่อยู่ในจังหวัดพังงาใครที่ต่างเคยได้ไปสัมผัสมาแล้วก็บอกเป็นเสียงเดียวกันว่าเหมือนดินแดน
+                แห่งสวรรค์ใต้มหาสมุทร น้ำทะเลใสแจ๋ว หาดทรายขาว ปลาน้อยใหญ่ยังมีหมู่ปะการังสวยงามที่ตอนนี้ติดอันดับ 1 ใน 10 ของโลกด้วย
                 </p>
               </div>
             </MDBCol>
@@ -64,7 +47,7 @@ const Topguide2 = () => {
                     <MDBView hover rounded className="z-depth-1-half mb-4">
                       <img
                         className="img-fluid"
-                        src="https://mdbootstrap.com/img/Photos/Others/img%20(27).jpg"
+                        src="https://s.isanook.com/tr/0/ud/280/1403097/998431.jpg"
                         alt=""
                       />
                       <a href="#!">
@@ -73,15 +56,15 @@ const Topguide2 = () => {
                     </MDBView>
                   </MDBCol>
                   <MDBCol md="5">
-                    <p className="font-weight-bold dark-grey-text">
-                      23/02/2018
-                    </p>
+                  <h3 className="font-weight-bold dark-grey-text mb-3 p-0">
+                  <a href="#!">เกาะหลีเป๊ะ</a>
+                </h3>
                     <div className="d-flex justify-content-between">
-                      <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                        <a href="#!" className="dark-grey-text">
-                          Duis aute irure dolor in reprehenderit in voluptate
-                        </a>
-                      </MDBCol>
+                    <p className="dark-grey-text mb-lg-0 mb-md-5 mb-4">
+                    เกาะขึ้นชื่อแห่งท้องทะเลอันดามัน ซึ่งเกาะหลีเป๊ะ เป็นเกาะสุดท้ายตอนใต้ของประเทศไทย
+                    ซึ่งติดกับน่านน้ำมาเลเซีย ความเจ๋งของเกาะแห่งนี้คือ น้ำทะเลสวยใส และมวลหมู่ปะการังอันอุดมสมบูรณ์
+                     จัดเป็นหนึ่งในพื้นที่ซึ่งดำน้ำทั้งตื้นและลึกสวยที่สุดเลยก็ว่าได้ เกาะหลีเป๊ะนั้นเป็นหนึ่งในเกาะของหมู่เกาะอาดัง-ราวี 
+                </p>
                       <a href="#!">
                         <MDBIcon icon="angle-double-right" />
                       </a>
@@ -92,11 +75,11 @@ const Topguide2 = () => {
 
               <div className="mb-4">
                 <MDBRow>
-                  <MDBCol md="7">
+                  <MDBCol md="6">
                     <MDBView hover rounded className="z-depth-1-half mb-4">
                       <img
                         className="img-fluid"
-                        src="https://mdbootstrap.com/img/Photos/Others/img%20(27).jpg"
+                        src="https://1.bp.blogspot.com/-EGUrMIxPlak/Vqdb2NljfBI/AAAAAAAAAJc/RwHej6v2kKU/s1600/1404112113-slide27034-o.jpg"
                         alt=""
                       />
                       <a href="#!">
@@ -105,15 +88,15 @@ const Topguide2 = () => {
                     </MDBView>
                   </MDBCol>
                   <MDBCol md="5">
-                    <p className="font-weight-bold dark-grey-text">
-                      23/02/2018
-                    </p>
+                  <h3 className="font-weight-bold dark-grey-text mb-3 p-0">
+                  <a href="#!">ทะเลแหวก-เกาะม้า</a>
+                </h3>
                     <div className="d-flex justify-content-between">
-                      <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                        <a href="#!" className="dark-grey-text">
-                          Duis aute irure dolor in reprehenderit in voluptate
-                        </a>
-                      </MDBCol>
+                    <p className="dark-grey-text mb-lg-0 mb-md-5 mb-4">
+                    เป็นหาดเล็ก ๆ ที่มีความเงียบสงบ ตั้งอยู่ทางทิศตะวันตกเฉียงเหนือของเกาะพะงัน โดยมีทางเดินยาวกว่า 350 เมตร 
+                    เชื่อมจากแม่หาดของเกาะพะงันไปยังเกาะม้า ยิ่งโดยเฉพาะในช่วงที่ระดับน้ำลดต่ำลง จะสามารถมองเห็นสันทรายได้ชัดเจนยิ่งขึ้น 
+                    สามารถเดินไปมาถึงกันได้ 
+                </p>
                       <a href="#!">
                         <MDBIcon icon="angle-double-right" />
                       </a>
@@ -126,6 +109,7 @@ const Topguide2 = () => {
           </MDBRow>
         </MDBCardBody>
       </MDBCard>
+                
 
 
 

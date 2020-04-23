@@ -5,7 +5,7 @@ import {Button} from 'reactstrap';
 const Lower = () => {
     return (
         <div>
-            <span class="d-block p-4 #546e7a blue-grey darken-1 accent-4 text-white h4-responsive ">Populars</span>
+            <span class="d-block p-3 #78909c blue-grey lighten-1 text-white h4-responsive ">Populars</span>
             <section className="text-left my-5">
                 <MDBRow className="text-center">
                     <MDBCol lg="3" md="12" className="mb-lg-0 mb-4">

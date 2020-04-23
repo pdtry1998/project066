@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-import Home from './component/Home';
+
 import Login from './component/Login';
 import Page_home from './component/Page_home';
 import Page_guide from './component/Page_guide';
@@ -14,6 +14,7 @@ import Page_aboutme from './component/Page_aboutme';
 import "mdbreact/dist/css/mdb.css";
 import fire from './config/fire';
 import { Route } from 'react-router-dom';
+import Home from './component/Home';
 
 
 class App extends Component {
@@ -52,7 +53,7 @@ class App extends Component {
     }
     return (
       <div>
-        <Route exact path="/" component={Page_home} />
+        <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/page_home" component={Page_home} />
         <Route path="/page_guide" component={Page_guide} />

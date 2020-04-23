@@ -3,7 +3,7 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter,MDBIcon } from "mdbreact";
 
 const FooterPage = () => {
   return (
-    <MDBFooter color="#1c2331 mdb-color darken-4" className="font-small pt-4 mt-4">
+    <MDBFooter color="#1c2331 mdb-color darken-4" className="font-small pt-5 mt-4">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="4">

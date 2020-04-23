@@ -2,17 +2,17 @@ import React from 'react'
 import Bar from './Bar';
 import Table from './Table'
 import Lower from './Lower'
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBIcon, MDBView, MDBBtn } from "mdbreact";
-import { MDBCardImage, MDBCardTitle, MDBCardText, MDBCardGroup } from 'mdbreact';
+import Footer from './Footer'
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBView } from "mdbreact";
 
 
 
-const PageHome = props => {
+
+const Home = props => {
   return (
     <div>
       <Bar />
       <div>
-
         <section className="my-5">
           <h2 className="h1-responsive font-weight-bold text-center my-5">
             ยินดีต้องรับเข้าสู่ "ไปเที่ยวกาน"
@@ -79,20 +79,21 @@ const PageHome = props => {
                   </MDBCardBody>
                 </MDBCard>
                 <MDBContainer className="mt-5">
-
-                  <Table /> 
-
+                  <div>
+                    <Table />
+                  </div>
                 </MDBContainer>
               </MDBCol>
             </MDBRow>
           </MDBCardBody>
         </MDBCard>
-
-                  <Lower/>
-
+        <div>
+          <Lower />
+          <Footer />
+        </div>
       </div>
     </div>
   )
 }
 
-export default PageHome;
+export default Home;
