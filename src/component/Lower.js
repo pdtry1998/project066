@@ -14,7 +14,7 @@ const Lower = () => {
                     <MDBCol lg="3" md="12" className="mb-lg-0 mb-4">
                         <MDBView className="overlay rounded z-depth-1" waves>
                             <img
-                                src="https://blog.bangkokair.com/wp-content/uploads/2018/01/OG-%E0%B8%94%E0%B8%AD%E0%B8%A2%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%99%E0%B8%99%E0%B8%97%E0%B9%8C-1.jpg"
+                                src="https://s.isanook.com/tr/0/rp/r/w728/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL3RyLzAvdWQvMjgzLzE0MTc0MTUvYWhyMGNobTZseTl6bG1senl3NXZiMnN1eTI5dGxfOS5qcGc=.jpg"
                                 alt=""
                                 className="img-fluid"
                             />
@@ -38,7 +38,7 @@ const Lower = () => {
                     <MDBCol lg="3" md="12" className="mb-lg-0 mb-4">
                         <MDBView className="overlay rounded z-depth-1" waves>
                             <img
-                                src="https://img.wongnai.com/p/1920x0/2018/05/16/9777aa01f05c4662aa2787d321644a62.jpg"
+                                src="https://s.isanook.com/tr/0/rp/r/w728/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL3RyLzAvdWQvMjgzLzE0MTc0MTUvYWhyMGNobTZseTl6bG1senl3NXZiMnN1eTI5dGxfNC5qcGc=.jpg"
                                 alt=""
                                 className="img-fluid"
                             />
