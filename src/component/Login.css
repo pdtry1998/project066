@@ -9,7 +9,7 @@
 }
 
 #classicformpage .view {
-    background-image: url("https://img.wongnai.com/p/1920x0/2019/01/09/9b7925896b09424c98a86e2d16a06eea.jpg");
+    background-image: url("https://pbs.twimg.com/media/DuBYYUFUcAAuBnC.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -19,8 +19,8 @@
   #classicformpage .gradient {
     background: linear-gradient(
       45deg,
-      rgba(0, 0, 0, 0.7),
-      rgba(196, 137, 171, 0.4) 100%
+      rgba(7, 7, 7, 0.7),
+      rgba(151, 97, 52, 0.4) 100%
     );
   }
   

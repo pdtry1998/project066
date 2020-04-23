@@ -47,35 +47,35 @@ const Bar = (props) => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://s359.kapook.com/pagebuilder/8c6127fd-cabb-4ca6-b386-8009327dcef7.jpg" alt="picture" width="150" height="700"
+                        src="https://s359.kapook.com/pagebuilder/8c6127fd-cabb-4ca6-b386-8009327dcef7.jpg" alt="picture" width="150" height="750"
                         alt="First slide"
                     />
                     <Carousel.Caption>
                         <h3>เสม็ดนางชี </h3>
-                        <p>ตั้งอยู่ที่ ทางหลวงแผ่นดินหมายเลข 2331 (อยู่ในอุทยานแห่งชาติภูหินร่องกล้า) กกสะทอน , ด่านซ้าย , เลย </p>
+                        <p>ตั้งอยู่ที่ ตำบล คลองเคียน อำเภอตะกั่วทุ่ง พังงา 82130 </p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://img.wongnai.com/p/1920x0/2018/05/16/9777aa01f05c4662aa2787d321644a62.jpg" alt="picture" width="150" height="700"
+                        src="https://ภาพวิว.com/wp-content/uploads/2018/09/JBK-7.jpg" alt="picture" width="150" height="750"
                         alt="Third slide"
                     />
 
                     <Carousel.Caption>
-                        <h3>เขตรักษาพันธุ์สัตว์ป่าภูเขียว</h3>
-                        <p>ตั้งอยู่ที่ ทางหลวงหมายเลข 2359 หนองบัวแดง , หนองบัวแดง , ชัยภูมิ</p>
+                        <h3>วัดพระแก้ว</h3>
+                        <p>ตั้งอยู่ที่ ถนน หน้าพระลาน แขวง พระบรมมหาราชวัง เขตพระนคร กรุงเทพมหานคร 10200</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://www.sabaiatkan.com/wp-content/uploads/2014/11/erawan-waterfall-3.jpg" alt="picture" width="150" height="700"
+                        src="https://pbs.twimg.com/media/DuBYYUFUcAAuBnC.jpg" alt="picture" width="150" height="750"
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h3>น้ำตกเอราวัณ</h3>
-                        <p>ตั้งอยู่ที่ ซอย หัวหิน 61 ถนน ดำเนินเกษม (ใช้ทางหลวงหมายเลข 4 (เพชรเกษม) ผ่านจังหวัดนครปฐม จังหวัดราชบุรี จังหวัดเพชรบุรี) หัวหิน , หัวหิน , ประจวบคีรีขันธ์ </p>
+                        <h3>ทุ่งทานตะวันเขาจีนแล</h3>
+                        <p>ตั้งอยู่ที่ ตำบลนิคมสร้างตนเอง อำเภอเมืองลพบุรี ลพบุรี 15000 </p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
@@ -83,7 +83,7 @@ const Bar = (props) => {
 
 
             <div>
-                <Navbar bg="dark " variant="dark ">
+                <Navbar bg="#1c2331 mdb-color darken-4 " variant="dark ">
                     <Navbar.Brand href="/page_home">หน้าแรก</Navbar.Brand>
                     <Nav className="mr-auto">
                         <Nav.Link href="/page_guide">แนะนำ</Nav.Link>
@@ -93,7 +93,6 @@ const Bar = (props) => {
                     </Nav>
                     <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <MDBBtn rounded color="danger">Search</MDBBtn>
                         <MDBBtn rounded color="danger" onClick={logout}>logout</MDBBtn>
                       
                     </Form>

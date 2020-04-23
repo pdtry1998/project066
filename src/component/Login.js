@@ -46,7 +46,6 @@ class Login extends Component {
     
           firebase.auth.GoogleAuthProvider.PROVIDER_ID,
           firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-          firebase.auth.GithubAuthProvider.PROVIDER_ID
       ],
     
       callback: {
@@ -106,6 +105,7 @@ class Login extends Component {
           <div>
             <MDBNavbar dark expand="md" fixed="top">
                 <MDBNavbarBrand>
+               
                   <strong className="white-text">ไปเที่ยวกาน</strong>
                 </MDBNavbarBrand>    
             </MDBNavbar>   
@@ -166,8 +166,8 @@ class Login extends Component {
                         />
                         <div className="text-center mt-4 black-text">
                         
-                          <MDBBtn rounded color="danger" onClick={this.login} >Login</MDBBtn>
-                          <MDBBtn rounded color="danger" onClick={this.sigup} >Sign Up</MDBBtn>
+                          <MDBBtn color="amber" onClick={this.login} >Login</MDBBtn>
+                          <MDBBtn color="amber" onClick={this.sigup} >Sign Up</MDBBtn>
                           <hr className="hr-light" />
                           <StyledFirebaseAuth
                                     uiConfig={this.uiConfig}
