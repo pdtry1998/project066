@@ -1,14 +1,11 @@
 import React from 'react';
-import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBIcon, MDBView, MDBBtn } from "mdbreact";
-import { MDBCardImage, MDBCardTitle, MDBCardText, MDBCardGroup } from 'mdbreact';
+import {  MDBRow,MDBCol,MDBCardBody,MDBMask,MDBView } from "mdbreact";
 import {Button} from 'reactstrap';
 
 const Lower = () => {
     return (
         <div>
-            <span class="d-block p-4 #546e7a blue-grey darken-1 accent-4 text-white h4-responsive ">
-            แนะนำ</span>
+            <span class="d-block p-4 #546e7a blue-grey darken-1 accent-4 text-white h4-responsive ">Populars</span>
             <section className="text-left my-5">
                 <MDBRow className="text-center">
                     <MDBCol lg="3" md="12" className="mb-lg-0 mb-4">

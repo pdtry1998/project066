@@ -2,6 +2,7 @@ import React from 'react'
 import Bar from './Bar';
 import Table from './Table'
 import Lower from './Lower'
+import Footer from './Footer'
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBIcon, MDBView, MDBBtn } from "mdbreact";
 import { MDBCardImage, MDBCardTitle, MDBCardText, MDBCardGroup } from 'mdbreact';
 
@@ -79,17 +80,18 @@ const PageHome = props => {
                   </MDBCardBody>
                 </MDBCard>
                 <MDBContainer className="mt-5">
-
+                <div>
                   <Table /> 
-
+                </div>
                 </MDBContainer>
               </MDBCol>
             </MDBRow>
           </MDBCardBody>
         </MDBCard>
-
-                  <Lower/>
-
+<div>
+        <Lower/>
+        <Footer/>
+</div>
       </div>
     </div>
   )
