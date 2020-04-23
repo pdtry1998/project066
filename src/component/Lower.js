@@ -23,7 +23,7 @@ const Lower = () => {
                             </a>
                         </MDBView>
                         <MDBCardBody className="pb-0">
-                            <h4 className="font-weight-bold my-3">Title of the news</h4>
+                            <h4 className="font-weight-bold my-3">ดอยอินทนนท์</h4>
                             <p className="grey-text">
                                 Temporibus autem quibusdam et aut officiis debitis aut rerum
                                 necessitatibus saepe eveniet ut et voluptates repudiandae.
@@ -47,7 +47,7 @@ const Lower = () => {
                             </a>
                         </MDBView>
                         <MDBCardBody className="pb-0">
-                            <h4 className="font-weight-bold my-3">Title of the news</h4>
+                            <h4 className="font-weight-bold my-3">เขาใหญ่</h4>
                             <p className="grey-text">
                                 Temporibus autem quibusdam et aut officiis debitis aut rerum
                                 necessitatibus saepe eveniet ut et voluptates repudiandae.
@@ -68,7 +68,7 @@ const Lower = () => {
                             </a>
                         </MDBView>
                         <MDBCardBody className="pb-0">
-                            <h4 className="font-weight-bold my-3">Title of the news</h4>
+                            <h4 className="font-weight-bold my-3">เขื่อนเชี่ยวหลาน</h4>
                             <p className="grey-text">
                                 Temporibus autem quibusdam et aut officiis debitis aut rerum
                                 necessitatibus saepe eveniet ut et voluptates repudiandae.
@@ -90,7 +90,7 @@ const Lower = () => {
                             </a>
                         </MDBView>
                         <MDBCardBody className="pb-0">
-                            <h4 className="font-weight-bold my-3">Title of the news</h4>
+                            <h4 className="font-weight-bold my-3">หาดป่าตอง</h4>
                             <p className="grey-text">
                                 Temporibus autem quibusdam et aut officiis debitis aut rerum
                                 necessitatibus saepe eveniet ut et voluptates repudiandae.
