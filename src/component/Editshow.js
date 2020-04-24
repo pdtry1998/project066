@@ -27,7 +27,7 @@ export default props => {
     return (
         
         <li>
-        <div>
+        <div >
             <MDBRow >
       <MDBCol md="3">
         <MDBCard>
@@ -42,7 +42,7 @@ export default props => {
                 <h3 className="white-text font-weight-light mb-1 p-0">
                     <strong>
                    
-                        ชื้่อสถานที่ : {placetName} <br />
+                        ชื่อสถานที่ : {placetName} <br />
                         อำเภอ : {district} <br />
                         จังหวัด: {province} <br />
                         ภาค: {sector} <br />

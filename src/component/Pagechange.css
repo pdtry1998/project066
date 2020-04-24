@@ -8,44 +8,31 @@
     background-color: white;
 }
 
-#classicformpage .view {
-    background-image: url("https://wallpaper.campus-star.com/app/uploads/2017/07/White-wallpaper01.jpg");
+#classicformpage1 .view {
+    background-image: url("https://static.posttoday.com/media/content/2019/06/24/18283467C2974862A69A6540CA962A32.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     height: 100vh;
   }
   
-  #classicformpage .gradient {
+  #classicformpage1 .gradient {
     background: linear-gradient(
       45deg,
-      rgba(87, 68, 37, 0.7),
-      rgba(179, 151, 99, 0.4) 100%
+      rgba(55, 82, 87, 0.7),
+      rgba(0, 0, 0, 0.4) 100%
     );
   }
   
-  #classicformpage .card {
+  #classicformpage1 .card {
     background-color: rgba(255, 255, 255, 0.2);
   }
   
-  #classicformpage h6 {
+  #classicformpage1 h6 {
     line-height: 1.7;
   }
   
-  #classicformpage .navbar {
-    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-  }
   
-  #classicformpage .top-nav-collapse {
-    background: #424f95 !important;
-  }
-  
-  @media (max-width: 768px) {
-    #classicformpage .navbar:not(.top-nav-collapse) {
-      background: #424f95 !important;
-    }
-  }
-  
-  #classicformpage label {
+  #classicformpage1 label {
     color: #fff !important;
   }

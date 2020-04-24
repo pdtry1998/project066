@@ -99,7 +99,7 @@ const PageChange = props => {
 
 
     return (
-      <div id='classicformpage'>
+      <div id='classicformpage1'>
       
           <div><Bar/> 
           </div>
@@ -127,17 +127,18 @@ const PageChange = props => {
                 </h6>
                 <img
                     className="img-fluid rounded-circle hoverable"
-                    src="https://r-cf.bstatic.com/images/hotel/max1024x768/210/210300157.jpg"
+                    src="https://www.tatreviewmagazine.com/wp-content/uploads/2018/07/pic3-2018_08_01.jpg"
                     alt=""
                   />
               </MDBAnimation>
+
 
               <MDBCol md='6' xl='6' className='mb-4'>
                 <MDBAnimation type='fadeInRight' delay='.3s'>
                   <MDBCard id='classic-card'>
                     <MDBCardBody className='white-text'>
                       <h3 className='text-center'>
-                        <MDBIcon icon='user' /> กรอกรายละเอียด:
+                        <MDBIcon icon='user' /> กรอกรายละเอียด :
                       </h3>
                       <hr className='hr-light' />
                       <MDBInput
@@ -196,8 +197,8 @@ const PageChange = props => {
                         id="reviews"
                         onChange={(e) => Setreviews(e.target.value)}
                       />
-                      <div className='text-center mt-4 black-text'>
-                        <MDBBtn color='indigo' onClick={addEditshow}>Send</MDBBtn>
+                      <div className='text-center mt-4 ไเระำ-text'>
+                        <MDBBtn color="#00bfa5 teal accent-4" onClick={addEditshow}>Send</MDBBtn>
                      
                       </div>
                     </MDBCardBody>
