@@ -87,7 +87,7 @@ const PageChange = props => {
 
         let id = (editshow.length === 0) ? 1 : editshow[editshow.length - 1].id + 1
         firestore.collection("editshow").doc(id + '').set({ id, imgUrl1, placetName, district, province, sector, time,reviews })
-        alert("You Add Finish")
+        alert("Add Finish")
     }
 
     const [activeTab, setActiveTab] = useState('1');
@@ -144,7 +144,7 @@ const PageChange = props => {
                       <MDBInput
                         className='white-text'
                         iconClass='white-text'
-                        label='Image  : รูปภาพ'
+                        label='Image URL  : รูปภาพ'
                         name="imgUrl1"
                         id="imgUrl1"
                         onChange={(e) => SetImgUrl1(e.target.value)}

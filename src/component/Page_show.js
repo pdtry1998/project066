@@ -59,7 +59,7 @@ const Pageshow = props => {
       
       else {
   
-        return <li>ไม่มีจ้าาาาาาาาาาาาาา</li>
+        return <li>Empty</li>
   
       }
     

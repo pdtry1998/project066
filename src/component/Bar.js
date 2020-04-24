@@ -88,11 +88,10 @@ const Bar = (props) => {
                     <Nav className="mr-auto">
                         <Nav.Link href="/page_guide">แนะนำ</Nav.Link>
                         <Nav.Link href="/page_change"> แลกเปลี่ยน </Nav.Link>
-                        <Nav.Link href="/page_show"> show </Nav.Link>
+                        <Nav.Link href="/page_show"> Reviews </Nav.Link>
                         <Nav.Link href="/page_aboutme">เกี่ยวกับฉัน</Nav.Link>
                     </Nav>
                     <Form inline>
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                         <MDBBtn rounded color="danger" onClick={logout}>logout</MDBBtn>
                       
                     </Form>
