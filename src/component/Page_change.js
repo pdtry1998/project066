@@ -1,27 +1,42 @@
-import React from 'react'
-import  { useState, useEffect } from 'react';
-import Bar from './Bar';
-import Editshow from './Editshow'
-import { Form } from 'react-bootstrap'
-import { TabContent, TabPane, Nav, NavItem, NavLink, Button, Row, Col } from 'reactstrap';
+import React,{ Component } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import {
-    MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline,
-    MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
-    } from "mdbreact";
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarNav,
+  MDBNavItem,
+  MDBNavLink,
+  MDBNavbarToggler,
+  MDBCollapse,
+  MDBMask,
+  MDBRow,
+  MDBCol,
+  MDBIcon,
+  MDBBtn,
+  MDBView,
+  MDBContainer,
+  MDBCard,
+  MDBCardBody,
+  MDBInput,
+  MDBFormInline,
+  MDBAnimation
+} from 'mdbreact';
+import './Pagechange.css';
+import Bar from './Bar'
+import { useState, useEffect } from 'react';
 import { firestore } from '../index'
-import { makeStyles } from '@material-ui/core/styles';
-
-
+import Footer from './Footer'
 
 const PageChange = props => {
 
-    const [id,Setid] = useState(0)
+    const [id, Setid] = useState(0)
     const [imgUrl1, SetImgUrl1] = useState('')
     const [placetName, SetplaceName] = useState('')
     const [district, Setdistrict] = useState('')
     const [province, Setprovince] = useState('')
     const [sector, Setsector] = useState('')
     const [time, Settime] = useState('')
+    const [reviews, Setreviews] = useState('')
     const [editshow, SetEditshow] = useState([{}])
 
     useEffect(() => {
@@ -37,18 +52,18 @@ const PageChange = props => {
             console.log(snapshot);
 
             let editshow = snapshot.docs.map(d => {
-                const { id, imgUrl1, placetName, district, province,  sector, time } = d.data()
-                console.log(id, imgUrl1, placetName, district, province,  sector, time )
-                return {id, imgUrl1, placetName, district, province,  sector, time }
+                const { id, imgUrl1, placetName, district, province, sector, time , reviews } = d.data()
+                console.log(id, imgUrl1, placetName, district, province, sector, time , reviews)
+                return { id, imgUrl1, placetName, district, province, sector, time , reviews }
             })
 
             SetEditshow(editshow)
-          
+
 
         })
     }
 
-    const renderEditshow= () => {
+    const renderEditshow = () => {
         console.log(editshow)
         if (editshow && editshow.length) {
             return editshow.map((editshow, index) => {
@@ -71,7 +86,7 @@ const PageChange = props => {
     const addEditshow = () => {
 
         let id = (editshow.length === 0) ? 1 : editshow[editshow.length - 1].id + 1
-        firestore.collection("editshow").doc(id + '').set({ id, imgUrl1, placetName, district, province,  sector, time})
+        firestore.collection("editshow").doc(id + '').set({ id, imgUrl1, placetName, district, province, sector, time,reviews })
         alert("You Add Finish")
     }
 
@@ -81,99 +96,122 @@ const PageChange = props => {
         if (activeTab !== tab) setActiveTab(tab);
     }
 
-   
-      
-      
-     
+
+
     return (
-        <div>
-            <Bar />
-            <div>
-            
-                <MDBNavbar color="cyan" dark expand="md">
-                    <MDBNavbarBrand>
-                        <strong className="white-text">กรอกข้อมูลสินค้า</strong>
-                    </MDBNavbarBrand>
-                </MDBNavbar>
-                
-            <TabContent activeTab={activeTab}>
-                <TabPane tabId="1">
-                    <Row>
-                        <Col sm="12">
-                            <div>
-                                <div>
-                                    <div className="col-6 mt-5 mx-auto card">
-                                    
-                                        <form>
-                                            <div className="form-group">
-                                                <label htmlFor="imgUrl1">Image 1 : รูปภาพ</label>
-                                                <input type="text"
-                                                    name="imgUrl1"
-                                                    className="form-control"
-                                                    id="imgUrl1"
-                                                    onChange={(e) => SetImgUrl1(e.target.value)} 
-                                                />
-                                            </div>
-                                            
-                                            <div className="form-group">
-                                                <label htmlFor="district"> district</label>
-                                                <input type="text"
-                                                    name="district"
-                                                    className="form-control"
-                                                    id="district"
-                                                    onChange={(e) => Setdistrict(e.target.value)} 
-                                                />
-                                            </div>
-                                            <div className="form-group">
-                                                <label htmlFor="province">province</label>
-                                                <input type="text"
-                                                    name="province"
-                                                    className="form-control"
-                                                    id="province"
-                                                    onChange={(e) => Setprovince(e.target.value)}  
-                                                />
-                                            </div>
-                                            <div className="form-group">
-                                                <label htmlFor="sector">sector</label>
-                                                <input type="text"
-                                                    name="sector"
-                                                    className="form-control"
-                                                    id="sector"
-                                                    onChange={(e) => Setsector(e.target.value)} 
-                                                />
-                                            </div>
-                                            <div className="form-group">
-                                                <label htmlFor="time">time</label>
-                                                <input type="text"
-                                                    name="time"
-                                                    className="form-control"
-                                                    id="time"
-                                                    onChange={(e) => Settime(e.target.value)}  
-                                                />
-                                            </div>
-                                        </form>
-                                        <div className="text-center">
-                                            <Button color="primary" style={{ margin:20, padding: 10}} onClick={addEditshow}>EDIT</Button>
-                                        </div>
-                                    </div>
+      <div id='classicformpage'>
+      
+          <div><Bar/> 
+          </div>
+        
 
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </TabPane>
-            </TabContent>    
-                
-            
+        <MDBView>
+          <MDBMask className='d-flex justify-content-center align-items-center gradient' />
+          <MDBContainer
+            style={{ height: '70%', width: '100%', paddingTop: '10rem' }}
+            className='mt-5  d-flex justify-content-center align-items-center'
+          >
+            <MDBRow>
+              <MDBAnimation
+                type='fadeInLeft'
+                delay='.3s'
+                className='white-text text-center text-md-left col-md-6 mt-xl-5 mb-5'
+              >
+                <h1 className='h1-responsive font-weight-bold'>
+                  มาแลกเปลี่ยนกันเถอะ 
+                </h1>
+                <hr className='hr-light' />
+                <h6 className='mb-4'>
+                เชิญเข้ามาแชร์ข้อมูลประสบการณ์การท่องเที่ยวในประเทศไทย
+                ที่ประทับใจของท่านให้เพื่อน ๆ ได้รับรู้กันเถอะ โดยกรอกผ่านฟอร์มนี้ได้เลย
+                </h6>
+                <img
+                    className="img-fluid rounded-circle hoverable"
+                    src="https://r-cf.bstatic.com/images/hotel/max1024x768/210/210300157.jpg"
+                    alt=""
+                  />
+              </MDBAnimation>
 
+              <MDBCol md='6' xl='6' className='mb-4'>
+                <MDBAnimation type='fadeInRight' delay='.3s'>
+                  <MDBCard id='classic-card'>
+                    <MDBCardBody className='white-text'>
+                      <h3 className='text-center'>
+                        <MDBIcon icon='user' /> กรอกรายละเอียด:
+                      </h3>
+                      <hr className='hr-light' />
+                      <MDBInput
+                        className='white-text'
+                        iconClass='white-text'
+                        label='Image  : รูปภาพ'
+                        name="imgUrl1"
+                        id="imgUrl1"
+                        onChange={(e) => SetImgUrl1(e.target.value)}
+                      />
+                      <MDBInput
+                        className='white-text'
+                        iconClass='white-text'
+                        label='Name  : ชื่อสถานทีื่'
+                        name="placename"
+                        id="placename"
+                        onChange={(e) => SetplaceName(e.target.value)}
+                    />
+                      <MDBInput
+                        className='white-text'
+                        iconClass='white-text'
+                        label='District  : อำเภอ'
+                        name="district"
+                        id="district"
+                        onChange={(e) => Setdistrict(e.target.value)}
+                      />
+                      <MDBInput
+                        className='white-text'
+                        iconClass='white-text'
+                        label='Province : จังหวัด'
+                        name="province"
+                        id="province"
+                        onChange={(e) => Setprovince(e.target.value)}
+                      />
+                       <MDBInput
+                        className='white-text'
+                        iconClass='white-text'
+                        label='Sector : ภาค'
+                        name="sector"
+                        id="sector"
+                        onChange={(e) => Setsector(e.target.value)}
+                      />
+                          <MDBInput
+                        className='white-text'
+                        iconClass='white-text'
+                        label='Time : เวลาเปิด - ปิด'
+                        name="time"
+                        id="time"
+                        onChange={(e) => Settime(e.target.value)}
+                      />
+                      <MDBInput
+                        className='white-text'
+                        iconClass='white-text'
+                        label='Reviews : รีวิว'
+                        name="reviews"
+                        id="reviews"
+                        onChange={(e) => Setreviews(e.target.value)}
+                      />
+                      <div className='text-center mt-4 black-text'>
+                        <MDBBtn color='indigo' onClick={addEditshow}>Send</MDBBtn>
+                     
+                      </div>
+                    </MDBCardBody>
+                  </MDBCard>
+                </MDBAnimation>
+              </MDBCol>
+            </MDBRow>
+          </MDBContainer>
+        </MDBView>
 
+     <div><Footer/></div>
+      </div>
+    );
+  }
 
-
-
-
-            </div>
-        </div>
-    )
-}
 
 export default PageChange;

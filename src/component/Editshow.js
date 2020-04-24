@@ -8,7 +8,7 @@ import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, 
 export default props => {
 
    const { editshow } = props
-   const { id, imgUrl1, placetName, district, province,  sector, time} = editshow
+   const { id, imgUrl1, placetName, district, province,  sector, time, reviews} = editshow
 
    
     const [isOpen, setIsOpen] = useState(false);
@@ -42,11 +42,12 @@ export default props => {
                 <h3 className="white-text font-weight-light mb-1 p-0">
                     <strong>
                    
-                        PlacetName : {placetName} <br />
-                        District : {district} <br />
-                        province: {province} <br />
-                        sector: {sector} <br />
-                        Time : {time} <br />
+                        ชื้่อสถานที่ : {placetName} <br />
+                        อำเภอ : {district} <br />
+                        จังหวัด: {province} <br />
+                        ภาค: {sector} <br />
+                        เวลาเปิด - ปิด : {time} <br />
+                        รีวิว : {reviews } <br />
                     </strong>
                 </h3>
             </MDBCardText>

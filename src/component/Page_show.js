@@ -32,9 +32,9 @@ const Pageshow = props => {
   
         let myAni = snapshot.docs.map(d => {
   
-          const { id, imgUrl1, placetName, district, province,  sector, time } = d.data()
-          console.log(id, imgUrl1, placetName, district, province,  sector, time)
-          return { id, imgUrl1, placetName, district, province,  sector, time }
+          const { id, imgUrl1, placetName, district, province,  sector, time, reviews } = d.data()
+          console.log(id, imgUrl1, placetName, district, province,  sector, time, reviews)
+          return { id, imgUrl1, placetName, district, province,  sector, time, reviews }
   
         })
   

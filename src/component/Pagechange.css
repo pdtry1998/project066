@@ -1,0 +1,51 @@
+.box{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.back{
+    background-color: white;
+}
+
+#classicformpage .view {
+    background-image: url("https://wallpaper.campus-star.com/app/uploads/2017/07/White-wallpaper01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+  }
+  
+  #classicformpage .gradient {
+    background: linear-gradient(
+      45deg,
+      rgba(87, 68, 37, 0.7),
+      rgba(179, 151, 99, 0.4) 100%
+    );
+  }
+  
+  #classicformpage .card {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  #classicformpage h6 {
+    line-height: 1.7;
+  }
+  
+  #classicformpage .navbar {
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+  }
+  
+  #classicformpage .top-nav-collapse {
+    background: #424f95 !important;
+  }
+  
+  @media (max-width: 768px) {
+    #classicformpage .navbar:not(.top-nav-collapse) {
+      background: #424f95 !important;
+    }
+  }
+  
+  #classicformpage label {
+    color: #fff !important;
+  }
