@@ -1,29 +1,8 @@
 import React from 'react'
 import fire from '../config/fire'
 import Carousel from 'react-bootstrap/Carousel'
-import { Navbar, Nav, FormControl, Form, Button } from 'react-bootstrap'
-import { BrowserRouter as Router } from "react-router-dom";
-import {
-    MDBNavbar,
-    MDBNavbarBrand,
-    MDBNavbarNav,
-    MDBNavItem,
-    MDBFormInline,
-    MDBNavLink,
-    MDBNavbarToggler,
-    MDBCollapse,
-    MDBMask,
-    MDBRow,
-    MDBCol,
-    MDBIcon,
-    MDBBtn,
-    MDBView,
-    MDBContainer,
-    MDBCard,
-    MDBCardBody,
-    MDBInput,
-    MDBAnimation
-} from "mdbreact";
+import { Navbar, Nav,Form } from 'react-bootstrap'
+import {MDBBtn,} from "mdbreact";
 
 
 const Bar = (props) => {
@@ -33,21 +12,14 @@ const Bar = (props) => {
         fire.auth().signOut();
     }
 
-
     return (
 
-
-
         <div id="classicformpage">
-         
-
-
-
             <Carousel>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://s359.kapook.com/pagebuilder/8c6127fd-cabb-4ca6-b386-8009327dcef7.jpg" alt="picture" width="150" height="750"
+                        src="https://s359.kapook.com/pagebuilder/8c6127fd-cabb-4ca6-b386-8009327dcef7.jpg" alt="picture" width="150" height="800"
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -58,7 +30,7 @@ const Bar = (props) => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://ภาพวิว.com/wp-content/uploads/2018/09/JBK-7.jpg" alt="picture" width="150" height="750"
+                        src="https://ภาพวิว.com/wp-content/uploads/2018/09/JBK-7.jpg" alt="picture" width="150" height="800"
                         alt="Third slide"
                     />
 
@@ -70,7 +42,7 @@ const Bar = (props) => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://pbs.twimg.com/media/DuBYYUFUcAAuBnC.jpg" alt="picture" width="150" height="750"
+                        src="https://pbs.twimg.com/media/DuBYYUFUcAAuBnC.jpg" alt="picture" width="150" height="800"
                         alt="Third slide"
                     />
                     <Carousel.Caption>
@@ -79,8 +51,6 @@ const Bar = (props) => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
-
-
 
             <div>
                 <Navbar bg="#1c2331 mdb-color darken-4 " variant="dark ">
@@ -91,23 +61,14 @@ const Bar = (props) => {
                         <Nav.Link href="/page_show"> Reviews </Nav.Link>
                         <Nav.Link href="/page_aboutme">เกี่ยวกับฉัน</Nav.Link>
                     </Nav>
+
                     <Form inline>
-                        <MDBBtn rounded color="danger" onClick={logout}>logout</MDBBtn>
-                      
+                        <MDBBtn rounded color="danger" onClick={logout}>logout</MDBBtn>                    
                     </Form>
                 </Navbar>
-
-
-
-
-
-
-
             </div>
         </div>
     )
-
-
 }
 
 export default Bar;

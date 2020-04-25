@@ -6,10 +6,10 @@ import Footer from './Footer'
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBView } from "mdbreact";
 
 
-
-
 const Home = props => {
+
   return (
+
     <div>
       <Bar />
       <div>
@@ -50,8 +50,6 @@ const Home = props => {
           </MDBRow>
         </MDBContainer>
 
-
-
         <MDBCard className="my-5 px-5 pb-5">
           <MDBCardBody>
             <MDBRow>
@@ -87,6 +85,7 @@ const Home = props => {
             </MDBRow>
           </MDBCardBody>
         </MDBCard>
+
         <div>
           <Lower />
           <Footer />

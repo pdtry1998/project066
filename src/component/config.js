@@ -1,7 +1,5 @@
 
 
-
-
 const config = {
     apiKey: "AIzaSyAzDDanq9gE87zoVsHWH1Hmf5sJRI8APZw",
     authDomain: "mini-project-38c69.firebaseapp.com",

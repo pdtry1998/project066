@@ -10,13 +10,13 @@ const PageGuide = props => {
     return (
         <div>
             <Bar />
-            <Topguide/>
-            <Topguide2/>
+            <Topguide />
+            <Topguide2 />
             <div>
-                <Pageguide3/>
-                <Footer/>
-                </div>
-            </div>    
+                <Pageguide3 />
+                <Footer />
+            </div>
+        </div>
     )
 }
 

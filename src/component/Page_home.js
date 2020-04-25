@@ -9,7 +9,9 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBView } 
 
 
 const PageHome = props => {
+
   return (
+
     <div>
       <Bar />
       <div>
@@ -51,8 +53,6 @@ const PageHome = props => {
           </MDBRow>
         </MDBContainer>
 
-
-
         <MDBCard className="my-5 px-5 pb-5">
           <MDBCardBody>
             <MDBRow>
@@ -80,18 +80,18 @@ const PageHome = props => {
                   </MDBCardBody>
                 </MDBCard>
                 <MDBContainer className="mt-5">
-                <div>
-                  <Table /> 
-                </div>
+                  <div>
+                    <Table />
+                  </div>
                 </MDBContainer>
               </MDBCol>
             </MDBRow>
           </MDBCardBody>
         </MDBCard>
-<div>
-        <Lower/>
-        <Footer/>
-</div>
+        <div>
+          <Lower />
+          <Footer />
+        </div>
       </div>
     </div>
   )

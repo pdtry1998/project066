@@ -3,7 +3,9 @@ import {  MDBRow,MDBCol,MDBCardBody,MDBMask,MDBView } from "mdbreact";
 import {Button} from 'reactstrap';
 
 const Lower = () => {
+
     return (
+        
         <div>
             <span class="d-block p-3 #78909c blue-grey lighten-1 text-white h4-responsive ">Populars</span>
             <section className="text-left my-5">
@@ -22,12 +24,9 @@ const Lower = () => {
                         <MDBCardBody className="pb-0">
                             <h4 className="font-weight-bold my-3">ดอยอินทนนท์</h4>
                             <p className="grey-text">
-                            “ดอยอินทนนท์” ยอดเขาที่สูงที่สุดในประเทศไทย ถือเป็นอีกหนึ่งแลนด์มาร์คสำคัญในจังหวัดเชียงใหม่
-                            
+                            “ดอยอินทนนท์” ยอดเขาที่สูงที่สุดในประเทศไทย ถือเป็นอีกหนึ่งแลนด์มาร์คสำคัญ
                             </p>
-                           
                             <Button color="black" size="m" href="https://travel.mthai.com/region/north/99627.html">read more</Button>
-                        
                         </MDBCardBody>
                     </MDBCol>
 
@@ -73,7 +72,6 @@ const Lower = () => {
                         </MDBCardBody>
                     </MDBCol>
 
-
                     <MDBCol lg="3" md="12" className="mb-lg-0 mb-4">
                         <MDBView className="overlay rounded z-depth-1" waves>
                             <img
@@ -88,7 +86,7 @@ const Lower = () => {
                         <MDBCardBody className="pb-0">
                             <h4 className="font-weight-bold my-3">หาดป่าตอง</h4>
                             <p className="grey-text">
-                            หาดป่าตองเป็นหาดที่สวยที่สุดในภูเก็ต มีชื่อเสียงโด่งดังไปทั่วโลก นักท่องเที่ยวมากมายต่างพากันมาชม
+                            หาดป่าตองเป็นหาดที่สวยที่สุดในภูเก็ต มีชื่อเสียงโด่งดังไปทั่วโลก นักท่องเที่ยวมากมาย
                             
                              </p>
                              <Button color="black" size="m" href="http://www.phuketcosmo.com/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%97%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B9%83%E0%B8%99%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%97%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B8%95%E0%B8%AD%E0%B8%87.html">read more</Button>
@@ -96,10 +94,6 @@ const Lower = () => {
                     </MDBCol>
                 </MDBRow>
             </section>
-
-         
-
-
         </div>
 
     );

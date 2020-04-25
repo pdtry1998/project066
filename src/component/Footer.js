@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter,MDBIcon } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 const FooterPage = () => {
   return (
@@ -10,11 +10,11 @@ const FooterPage = () => {
             <h3 className="title">#ไปเที่ยวกาน</h3>
             <p>
               By  <a href="#!">
-                        <strong>Teerayut Saetee </strong>
-                      </a> 6035512066
+                <strong>Teerayut Saetee </strong>
+              </a> 6035512066
             </p>
           </MDBCol>
-        
+
         </MDBRow>
       </MDBContainer>
     </MDBFooter>

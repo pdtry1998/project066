@@ -1,19 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import {
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBMask,
-  MDBRow,
-  MDBCol,
-  MDBIcon,
-  MDBBtn,
-  MDBView,
-  MDBContainer,
-  MDBCard,
-  MDBCardBody,
-  MDBInput,
-  MDBAnimation
+  MDBNavbar, MDBNavbarBrand, MDBMask, MDBRow, MDBCol, MDBIcon, MDBBtn, MDBView, MDBContainer, MDBCard, MDBCardBody, MDBInput, MDBAnimation
 } from "mdbreact";
 import "./Login.css";
 import fire from "../config/fire";
@@ -21,94 +9,87 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 import firebase from 'firebase'
 
+
 class Login extends Component {
 
-    constructor(props) {
+  constructor(props) {
 
-        super(props)
-        this.login = this.login.bind(this)
-        this.handleChange = this.handleChange.bind(this)
-        this.sigup = this.sigup.bind(this)
-        this.state = {
+    super(props)
+    this.login = this.login.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+    this.sigup = this.sigup.bind(this)
+    this.state = {
 
-            email: "",
-            password: "",
-            isSignedIn : false
-
-        }
+      email: "",
+      password: "",
+      isSignedIn: false
 
     }
 
-    uiConfig = {
+  }
 
-      signInFlow: "popup",
-      signInOptions: [
-    
-          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      ],
-    
-      callback: {
-    
-          signInSuccess: () => false
-      }
+  uiConfig = {
+
+    signInFlow: "popup",
+    signInOptions: [
+
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+    ],
+
+    callback: {
+
+      signInSuccess: () => false
     }
-    
-     componentDidMount () {
-    
-    
-    
-      firebase.auth().onAuthStateChanged(user => {
-          this.setState({ isSignedIn: !!user })
-      })
-    }
+  }
 
+  componentDidMount() {
 
+    firebase.auth().onAuthStateChanged(user => {
+      this.setState({ isSignedIn: !!user })
+    })
+  }
 
+  login(e) {
 
+    e.preventDefault()
 
+    fire.auth().signInWithEmailAndPassword(this.state.email, this.state.passeword).then((u) => {
+      console.log(u)
+    }).catch((err) => {
+      console.log(err)
+    })
 
-    login(e) {
+  }
 
-        e.preventDefault()
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
 
-        fire.auth().signInWithEmailAndPassword(this.state.email, this.state.passeword).then((u) => {
-            console.log(u)
-        }).catch((err) => {
-            console.log(err)
-        })
-
-    }
-
-    handleChange(e) {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    }
-
-    sigup(e){
-        e.preventDefault()
-        fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
-            console.log(u)
-        }).catch((err) =>{
-            console.log(err)
-        })
-    }
-
-
-  
+  sigup(e) {
+    e.preventDefault()
+    fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
+      console.log(u)
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
 
   render() {
+
     return (
+
       <div id="classicformpage">
         <Router>
           <div>
             <MDBNavbar dark expand="md" fixed="top">
-                <MDBNavbarBrand>
-               
-                  <strong className="white-text">ไปเที่ยวกาน</strong>
-                </MDBNavbarBrand>    
-            </MDBNavbar>   
+              <MDBNavbarBrand>
+
+                <strong className="white-text">ไปเที่ยวกาน</strong>
+              </MDBNavbarBrand>
+            </MDBNavbar>
           </div>
         </Router>
 
@@ -126,7 +107,7 @@ class Login extends Component {
                   </h1>
                   <hr className="hr-light" />
                   <h6 className="mb-4">
-                    ยินดีต้อนรับเข้าสู่เว็บไซต์ไปเที่ยวกาน เชิญเข้ามาแชร์ข้อมูลประสบการณ์การท่องเที่ยวในประเทศไทยที่ประทับใจของท่านให้เพื่อน ๆ 
+                    ยินดีต้อนรับเข้าสู่เว็บไซต์ไปเที่ยวกาน เชิญเข้ามาแชร์ข้อมูลประสบการณ์การท่องเที่ยวในประเทศไทยที่ประทับใจของท่านให้เพื่อน ๆ
                     ได้รับรู้กันเถอะ
 
                   </h6>
@@ -144,8 +125,8 @@ class Login extends Component {
                           className="white-text"
                           iconClass="white-text"
                           label="Your email"
-                          roup type="email" 
-                          name="email" 
+                          roup type="email"
+                          name="email"
                           validate error="wrong"
                           success="right"
                           icon="envelope"
@@ -158,21 +139,21 @@ class Login extends Component {
                           label="Your password"
                           icon="lock"
                           type="password"
-                          group type="password" 
-                          name="password" 
-                          validate value={this.state.password} 
+                          group type="password"
+                          name="password"
+                          validate value={this.state.password}
                           onChange={this.handleChange}
 
                         />
                         <div className="text-center mt-4 black-text">
-                        
+
                           <MDBBtn color="amber" onClick={this.login} >Login</MDBBtn>
                           <MDBBtn color="amber" onClick={this.sigup} >Sign Up</MDBBtn>
                           <hr className="hr-light" />
                           <StyledFirebaseAuth
-                                    uiConfig={this.uiConfig}
-                                    firebaseAuth={firebase.auth()}
-                                />
+                            uiConfig={this.uiConfig}
+                            firebaseAuth={firebase.auth()}
+                          />
                         </div>
                       </MDBCardBody>
                     </MDBCard>
@@ -182,8 +163,6 @@ class Login extends Component {
             </MDBContainer>
           </MDBMask>
         </MDBView>
-
-        
       </div>
     );
   }
